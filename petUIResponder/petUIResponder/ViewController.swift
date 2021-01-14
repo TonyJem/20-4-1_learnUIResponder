@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         
         // Adjustable parameters:
         resposiveLabel.backgroundColor = UIColor(red: 1/255, green: 121/255, blue: 190/255, alpha: 1.0)
-        resposiveLabel.text = "Responsive label"
+        resposiveLabel.text = "Responsive Label"
         resposiveLabel.layer.cornerRadius = 4
         resposiveLabel.layer.masksToBounds = true
         
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         menu.setMenuVisible(true, animated: true)
     }
     
-    @objc func saveCliked() {
+    @objc func saveClicked() {
         resposiveLabel.resignFirstResponder()
         print("Saved")
     }
