@@ -33,5 +33,10 @@ class ViewController: UIViewController {
         menu.setTargetRect(resposiveLabel.frame, in: self.view)
         menu.setMenuVisible(true, animated: true)
     }
+    
+    @objc func saveCliked() {
+        resposiveLabel.resignFirstResponder()
+        print("Saved")
+    }
 }
 
