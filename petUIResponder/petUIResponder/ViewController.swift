@@ -33,6 +33,9 @@ class ViewController: UIViewController {
         menu.arrowDirection = .default
         menu.setTargetRect(resposiveLabel.frame, in: self.view)
         menu.setMenuVisible(true, animated: true)
+        
+        let saveMenuItem = UIMenuItem(title: "Save", action: #selector(saveClicked))
+        menu.menuItems = [saveMenuItem]
     }
     
     @objc func saveClicked() {
