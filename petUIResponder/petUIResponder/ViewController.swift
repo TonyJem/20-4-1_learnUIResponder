@@ -19,6 +19,14 @@ class ViewController: UIViewController {
         
         // Add to main view:
         self.view.addSubview(resposiveLabel)
+        
+        resposiveLabel.isUserInteractionEnabled = true
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressHandler))
+        longPressRecognizer.minimumPressDuration = 0.2
+    }
+    
+    @objc func longPressHandler() {
+        
     }
 }
 
