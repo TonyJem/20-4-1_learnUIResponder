@@ -27,6 +27,11 @@ class ViewController: UIViewController {
     
     @objc func longPressHandler() {
         resposiveLabel.becomeFirstResponder()
+        
+        let menu = UIMenuController()
+        menu.arrowDirection = .default
+        menu.setTargetRect(resposiveLabel.frame, in: self.view)
+        menu.setMenuVisible(true, animated: true)
     }
 }
 
