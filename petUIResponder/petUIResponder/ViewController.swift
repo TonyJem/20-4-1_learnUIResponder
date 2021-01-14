@@ -2,36 +2,36 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let resposiveLabel = ResponsiveView()
+    let responsiveLabel = ResponsiveView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Essetial parameters:
-        resposiveLabel.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
-        resposiveLabel.center = self.view.center
+        responsiveLabel.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
+        responsiveLabel.center = self.view.center
         
         // Adjustable parameters:
-        resposiveLabel.backgroundColor = UIColor(red: 1/255, green: 121/255, blue: 190/255, alpha: 1.0)
-        resposiveLabel.text = "Responsive Label"
-        resposiveLabel.layer.cornerRadius = 4
-        resposiveLabel.layer.masksToBounds = true
+        responsiveLabel.backgroundColor = UIColor(red: 1/255, green: 121/255, blue: 190/255, alpha: 1.0)
+        responsiveLabel.text = "Responsive Label"
+        responsiveLabel.layer.cornerRadius = 4
+        responsiveLabel.layer.masksToBounds = true
         
         // Add to main view:
-        self.view.addSubview(resposiveLabel)
+        self.view.addSubview(responsiveLabel)
         
-        resposiveLabel.isUserInteractionEnabled = true
+        responsiveLabel.isUserInteractionEnabled = true
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressHandler))
         longPressRecognizer.minimumPressDuration = 0.2
-        resposiveLabel.addGestureRecognizer(longPressRecognizer)
+        responsiveLabel.addGestureRecognizer(longPressRecognizer)
     }
     
     @objc func longPressHandler() {
-        resposiveLabel.becomeFirstResponder()
+        responsiveLabel.becomeFirstResponder()
         
         let menu = UIMenuController()
         menu.arrowDirection = .default
-        menu.setTargetRect(resposiveLabel.frame, in: self.view)
+        menu.setTargetRect(responsiveLabel.frame, in: self.view)
         menu.setMenuVisible(true, animated: true)
         
         let saveMenuItem = UIMenuItem(title: "Save", action: #selector(saveClicked))
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     }
     
     @objc func saveClicked() {
-        resposiveLabel.resignFirstResponder()
+        responsiveLabel.resignFirstResponder()
         print("Saved")
     }
 }
