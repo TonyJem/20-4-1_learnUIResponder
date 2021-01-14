@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     @objc func longPressHandler() {
-        
+        resposiveLabel.becomeFirstResponder()
     }
 }
 
